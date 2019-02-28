@@ -14,6 +14,7 @@
 		570252A322275E34003154B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570252A122275E34003154B6 /* LaunchScreen.storyboard */; };
 		570252AE22275E34003154B6 /* CapacitacaoIOS_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570252AD22275E34003154B6 /* CapacitacaoIOS_QuizTests.swift */; };
 		570252B922275E34003154B6 /* CapacitacaoIOS_QuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570252B822275E34003154B6 /* CapacitacaoIOS_QuizUITests.swift */; };
+		570252C8222763D2003154B6 /* quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 570252C7222763D2003154B6 /* quiz.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		570252B422275E34003154B6 /* CapacitacaoIOS-QuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-QuizUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		570252B822275E34003154B6 /* CapacitacaoIOS_QuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapacitacaoIOS_QuizUITests.swift; sourceTree = "<group>"; };
 		570252BA22275E34003154B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		570252C7222763D2003154B6 /* quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quiz.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		5702529722275E33003154B6 /* CapacitacaoIOS-Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				570252C622276314003154B6 /* images */,
 				5702529822275E33003154B6 /* AppDelegate.swift */,
 				5702529A22275E33003154B6 /* ViewController.swift */,
 				5702529C22275E33003154B6 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				570252BA22275E34003154B6 /* Info.plist */,
 			);
 			path = "CapacitacaoIOS-QuizUITests";
+			sourceTree = "<group>";
+		};
+		570252C622276314003154B6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				570252C7222763D2003154B6 /* quiz.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				570252C8222763D2003154B6 /* quiz.png in Resources */,
 				570252A322275E34003154B6 /* LaunchScreen.storyboard in Resources */,
 				570252A022275E34003154B6 /* Assets.xcassets in Resources */,
 				5702529E22275E33003154B6 /* Main.storyboard in Resources */,
