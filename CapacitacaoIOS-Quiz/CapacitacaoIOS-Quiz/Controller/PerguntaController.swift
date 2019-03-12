@@ -14,9 +14,8 @@ class PerguntaController: UIViewController {
     @IBOutlet weak var txtOpcao2: UITextField!
     @IBOutlet weak var txtOpcao3: UITextField!
     @IBOutlet weak var txtOpcao4: UITextField!
-    
 
-    var perguntas = QuizDAO()
+    var perguntas: QuizDAO?
     let novaPergunta = Pergunta()
     
     override func viewDidLoad() {
@@ -25,25 +24,22 @@ class PerguntaController: UIViewController {
     }
     
     @IBAction func btnIncluir(_ sender: Any) {
-        novaPergunta.id = perguntas.lista.count
+        novaPergunta.id = perguntas!.lista.count
         novaPergunta.pergunta = txtPergunta.text!
         novaPergunta.opcaoCorreta = txtOpcaoCorreta.text!
         novaPergunta.opcao2 = txtOpcao2.text!
         novaPergunta.opcao3 = txtOpcao3.text!
         novaPergunta.opcao4 = txtOpcao4.text!
         
-        perguntas.lista.append(novaPergunta)
+        perguntas!.lista.append(novaPergunta)
         
-        
-        
+        _ = navigationController?.popViewController(animated: true) //Volta para tela anterior
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        //retrieve the destination view controller for free
-//        if let myDestincationViewController = (segue.destination as? PerguntaController) {
-//            myDestincationViewController.perguntas = perguntas
+//        if (segue.destination is TableViewController) {
+//            let nextView = segue.destination as? TableViewController
+//            nextView?.Perguntas = perguntas
 //        }
 //    }
-    
-    
 }

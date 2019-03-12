@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-var Perguntas = QuizDAO()
+var perguntas = QuizDAO()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,10 @@ var Perguntas = QuizDAO()
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -30,17 +34,37 @@ var Perguntas = QuizDAO()
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Perguntas.lista.count
+        return perguntas.lista.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TBListaPerguntas", for: indexPath)
 
-        cell.textLabel?.text = Perguntas.lista[indexPath.row].pergunta
+        cell.textLabel?.text = perguntas.lista[indexPath.row].pergunta
 
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.destination is PerguntaController) {
+            let nextView = segue.destination as? PerguntaController
+            
+            
+            nextView?.perguntas = self.perguntas
+            let novaPergunta = Pergunta()
+            novaPergunta.id = perguntas.lista.count
+            novaPergunta.pergunta = "Blablabla"
+            novaPergunta.opcaoCorreta = "Blablabla"
+            novaPergunta.opcao2 = "Blablabla"
+            novaPergunta.opcao3 = "Blablabla"
+            novaPergunta.opcao4 = "Blablabla"
+            
+            //nextView?.perguntas!.lista.append(novaPergunta)
+                
+            }
+        }
+
  
 
     /*
@@ -89,3 +113,4 @@ var Perguntas = QuizDAO()
     */
 
 }
+
