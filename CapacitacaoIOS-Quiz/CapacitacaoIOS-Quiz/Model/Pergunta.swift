@@ -1,11 +1,3 @@
-//
-//  Pergunta.swift
-//  CapacitacaoIOS-Quiz
-//
-//  Created by ALUNO on 01/03/19.
-//  Copyright © 2019 ALUNO. All rights reserved.
-//
-
 import Foundation
 
 class Pergunta {
@@ -17,12 +9,12 @@ class Pergunta {
     var opcao4 = String()
     
     init () {
-        self.id = 0
-        self.pergunta = ""
-        self.opcaoCorreta = ""
-        self.opcao2 = ""
-        self.opcao3 = ""
-        self.opcao4 = ""
+//        self.id = 0
+//        self.pergunta = ""
+//        self.opcaoCorreta = ""
+//        self.opcao2 = ""
+//        self.opcao3 = ""
+//        self.opcao4 = ""
     }
 }
 

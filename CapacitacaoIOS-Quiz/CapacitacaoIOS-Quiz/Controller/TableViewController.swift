@@ -1,11 +1,3 @@
-//
-//  TableViewController.swift
-//  CapacitacaoIOS-Quiz
-//
-//  Created by ALUNO on 01/03/19.
-//  Copyright © 2019 ALUNO. All rights reserved.
-//
-
 import UIKit
 
 class TableViewController: UITableViewController {
@@ -23,7 +15,7 @@ var perguntas = QuizDAO()
     
     override func viewWillAppear(_ animated: Bool) {
           tableView.reloadData()
-    }
+    } 
 
     // MARK: - Table view data source
 
@@ -49,18 +41,15 @@ var perguntas = QuizDAO()
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.destination is PerguntaController) {
             let nextView = segue.destination as? PerguntaController
-            
-            
             nextView?.perguntas = self.perguntas
-            let novaPergunta = Pergunta()
-            novaPergunta.id = perguntas.lista.count
-            novaPergunta.pergunta = "Blablabla"
-            novaPergunta.opcaoCorreta = "Blablabla"
-            novaPergunta.opcao2 = "Blablabla"
-            novaPergunta.opcao3 = "Blablabla"
-            novaPergunta.opcao4 = "Blablabla"
-            
-            //nextView?.perguntas!.lista.append(novaPergunta)
+//            let novaPergunta = Pergunta()
+//            novaPergunta.id = perguntas.lista.count
+//            novaPergunta.pergunta = "Blablabla"
+//            novaPergunta.opcaoCorreta = "Blablabla"
+//            novaPergunta.opcao2 = "Blablabla"
+//            novaPergunta.opcao3 = "Blablabla"
+//            novaPergunta.opcao4 = "Blablabla"
+//            nextView?.perguntas!.lista.append(novaPergunta)
                 
             }
         }

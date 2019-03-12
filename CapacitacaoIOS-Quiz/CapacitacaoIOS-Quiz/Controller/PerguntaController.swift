@@ -1,11 +1,3 @@
-//
-//  PerguntaController.swift
-//  CapacitacaoIOS-Quiz
-//
-//  Created by ALUNO on 08/03/19.
-//  Copyright © 2019 ALUNO. All rights reserved.
-//
-
 import UIKit
 
 class PerguntaController: UIViewController {
@@ -33,13 +25,6 @@ class PerguntaController: UIViewController {
         
         perguntas!.lista.append(novaPergunta)
         
-        _ = navigationController?.popViewController(animated: true) //Volta para tela anterior
+        _ = navigationController?.popViewController(animated: true) //Voltar para tela anterior
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.destination is TableViewController) {
-//            let nextView = segue.destination as? TableViewController
-//            nextView?.Perguntas = perguntas
-//        }
-//    }
 }

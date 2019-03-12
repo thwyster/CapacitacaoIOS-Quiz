@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  CapacitacaoIOS-Quiz
-//
-//  Created by ALUNO on 27/02/19.
-//  Copyright © 2019 ALUNO. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
